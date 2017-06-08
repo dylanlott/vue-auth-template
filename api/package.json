@@ -1,6 +1,6 @@
 {
-  "name": "builtright",
-  "description": "server for the builtright platform",
+  "name": "vue-auth-tutorial",
+  "description": "server for a vue application",
   "version": "0.0.1",
   "homepage": "",
   "main": "src/",
