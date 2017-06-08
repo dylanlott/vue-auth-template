@@ -1,5 +1,12 @@
 <template>
   <v-container fluid>
+      <v-layout>
+        <v-flex xs12>
+          <div class="container">
+            <h1>Vue2 / Vue Auth Template</h1>
+          </div>
+        </v-flex>
+      </v-layout>
       <v-layout row>
         <v-flex xs6>
           <v-card>

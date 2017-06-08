@@ -1,10 +1,7 @@
 <template>
   <v-container flex>
-
     <h1>Dashboard</h1>
-      <v-layout row wrap>
-        This should only be seen if you're logged in!
-      </v-layout>
+    <p>This should only be seen if you're logged in!</p>
   </v-container>
 </template>
 
@@ -35,6 +32,9 @@ export default {
 
   .dropdown__floating
     width: 200px
+
+  .text-center
+    text-align: center
 </style>
 
 <style scoped>
