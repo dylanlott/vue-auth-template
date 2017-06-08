@@ -34,7 +34,7 @@
           required
         ></v-text-field>
       </div>
-      <v-btn primary class="button__signup" @click.native="submit()">
+      <v-btn primary class="button__signup white--text" @click.native="submit()">
         Sign Up
       </v-btn>
       <p>

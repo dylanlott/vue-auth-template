@@ -22,7 +22,7 @@
           required
         ></v-text-field>
         <div>
-          <v-btn name="loginsubmit" raised primary class="button__login"
+          <v-btn name="loginsubmit" raised primary class="button__login white--text"
           @click.native="submit()">Login</v-btn>
           <p>Not a member yet? <router-link :to="{ name: 'signup' }">
             <a href="#">Sign up here</a>.</router-link></p>

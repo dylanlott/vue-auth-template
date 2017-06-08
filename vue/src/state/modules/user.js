@@ -55,6 +55,11 @@ const mutations = {
     state.success = true
     state.user = user
   },
+  [types.SIGNUP_USER_FAILURE] (state, errors) {
+    state.loading = false
+    state.success = false
+    state.errors = errors
+  },
   [types.RECEIVE_USER_INFO] (state) {
     state.loading = true
     state.success = false

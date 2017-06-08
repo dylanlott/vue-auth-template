@@ -3,9 +3,9 @@
     <v-container fluid>
       <v-layout row wrap>
         <v-flex xs12 md4 offset-md4>
-            <h1 class="text-xs-center">Login</h1>
-            <h3>{{message}}</h3>
-              <LoginForm></LoginForm>
+          <h1 class="text-xs-center">Login</h1>
+          <h3>{{message}}</h3>
+          <LoginForm></LoginForm>
         </v-flex>
       </v-layout>
     </v-container>
@@ -21,7 +21,7 @@ import {router} from '../router/index.js'
     name: 'login',
     data () {
       return {
-        message: 'Login to BuiltRight'
+        message: 'Enter your credentials'
       }
     },
     created () {

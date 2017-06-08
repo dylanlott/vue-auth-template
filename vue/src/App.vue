@@ -55,6 +55,36 @@
           </v-list-item>
         </router-link>
 
+        <router-link v-if="!user.token"
+            class="menu-link"
+            :to="{ name: 'login'}">
+          <v-list-item >
+            <v-list-tile>
+              <v-list-tile-action>
+                <v-icon>lock</v-icon>
+              </v-list-tile-action>
+              <v-list-tile-content>
+                <v-list-tile-title>Login</v-list-tile-title>
+              </v-list-tile-content>
+            </v-list-tile>
+          </v-list-item>
+        </router-link>
+
+        <router-link v-if="!user.token"
+            class="menu-link"
+            :to="{ name: 'signup'}">
+          <v-list-item >
+            <v-list-tile>
+              <v-list-tile-action>
+                <v-icon>create</v-icon>
+              </v-list-tile-action>
+              <v-list-tile-content>
+                <v-list-tile-title>Sign Up</v-list-tile-title>
+              </v-list-tile-content>
+            </v-list-tile>
+          </v-list-item>
+        </router-link>
+
         <v-divider
          dark
          class="my-4"
@@ -76,14 +106,13 @@
     <v-toolbar fixed class="deep-orange">
       <v-toolbar-side-icon light @click.native.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title>
-        <router-link class="routerlink" :to="{ name: 'dashboard' }">
+        <router-link class="router-link" :to="{ name: 'dashboard' }">
           vue-auth-tutorial
         </router-link>
       </v-toolbar-title>
     </v-toolbar>
     <main>
       <router-view></router-view>
-      <BottomNav></BottomNav>
     </main>
   </v-app>
 </template>
@@ -91,7 +120,6 @@
 <script>
 import {mapState} from 'vuex'
 import {router} from './router/index'
-import BottomNav from './components/BottomNav.vue'
 export default {
   name: 'vue-auth-tutorial',
   computed: mapState({
@@ -103,9 +131,6 @@ export default {
       drawer: null,
       show: false
     }
-  },
-  components: {
-    BottomNav
   },
   methods: {
     goToDashboard () {
