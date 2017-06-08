@@ -1,0 +1,43 @@
+{
+  "name": "builtright-vue",
+  "description": "vue2 app for the builtright community",
+  "author": "Dylan Lott <lott.dylan@gmail.com>",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --inline --hot --host=0.0.0.0 --port=8081",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "linter": "./node_modules/.bin/standard ./src/**/*.js",
+    "pushprod": "npm run linter && fly deploy:prod",
+    "pushdev": "npm run linter && fly deploy:dev",
+    "deploy": "git push deploy master",
+    "docs": "jsdoc -c ./conf.json && cd out && ws"
+  },
+  "dependencies": {
+    "axios": "^0.15.3",
+    "bootstrap-vue": "^0.15.6",
+    "moment": "^2.18.1",
+    "vue": "^2.1.8",
+    "vue-router": "^2.1.1",
+    "vue-sweetalert": "^0.1.17",
+    "vuex": "^2.1.1"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "buble": "^0.15.1",
+    "buble-loader": "^0.4.0",
+    "cross-env": "^3.0.0",
+    "css-loader": "^0.25.0",
+    "file-loader": "^0.9.0",
+    "flightplan": "^0.6.15",
+    "image-webpack-loader": "^3.3.1",
+    "standard": "^10.0.2",
+    "style-loader": "^0.13.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^2.4.0",
+    "vue-loader": "^10.0.2",
+    "vue-template-compiler": "^2.1.8",
+    "vuetify": "^0.12.1",
+    "webpack": "^2.2.0-rc.2",
+    "webpack-dev-server": "^2.2.0-rc.0"
+  }
+}
