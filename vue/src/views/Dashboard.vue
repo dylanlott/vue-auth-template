@@ -12,8 +12,7 @@ export default {
   name: 'dashboard',
   computed: mapState({
     user: state => state.user
-  }),
-  components: { }
+  })
 }
 
 </script>

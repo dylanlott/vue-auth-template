@@ -8,7 +8,7 @@ const state = {
   user_id: storage.getItem('user_id') || '',
   email: storage.getItem('email'),
   _id: storage.getItem('_id'),
-  displayName: storage.getItem('displayName'),
+  displayName: storage.getItem('displayName') || '',
   admin: false,
   access: 1000,
   loading: false,
@@ -33,6 +33,7 @@ const mutations = {
     state.email = user.data.email
     state.token = user.token
     state.access = user.data.access
+    state._id = user.data._id
   },
   [types.LOGOUT_USER_REQUEST] (state) {
     state.token = null
