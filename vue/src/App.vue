@@ -123,8 +123,7 @@ import {router} from './router/index'
 export default {
   name: 'vue-auth-tutorial',
   computed: mapState({
-    user: state => state.user,
-    alerts: state => state.user.alerts
+    user: state => state.user
   }),
   data() {
     return {
