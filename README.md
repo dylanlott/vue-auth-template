@@ -8,6 +8,16 @@ Then, run `$ npm run dev` in both directories to start up the server and the vue
 
 `$ npm run build` will build the vue app for production. 
 
+## Mongo 
+
+The feathers server will require a mongo instance running to work. 
+
+If you use Docker, you can run:
+
+`$ docker run --name mongo -p 27017:27017 -d mongo` 
+
+and this will boot up a quick development mongo instance in one command.
+
 # Vuetify
 
 This template uses Vuetify, a component framework for VueJS. It's still very much in flux, so breaking changes are made pretty regularly
